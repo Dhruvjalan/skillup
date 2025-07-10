@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gray-50 dark:bg-gray-900;
+  transition: background-color 0.3s ease;
+}
+
+.hero-container {
+  display:flex;
+  height : 100vh;
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(to right, #f7fafc, #edf2f7);
+
+}
+
+.hero-text {
+  justify-self: center;
+  margin-top: 25vh;
+}
+
+.hero-text-inner {
+  margin: 1rem
+}
+
+.feature-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.feature-card:hover {
+  @apply transform scale-105 shadow-lg;
+}
+
+.testimonial-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.testimonial-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.btn-hover-effect {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.btn-hover-effect:hover {
+  @apply transform -translate-y-1 shadow-md;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-600;
+}
+
+.chakra-ui-dark .transition-colors {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+}
+
+.pricing-card-glow {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.pricing-card-glow:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+}
+
+.navbar-blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.mobile-menu-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.mobile-menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.mobile-menu-exit {
+  opacity: 1;
+}
+
+.mobile-menu-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
